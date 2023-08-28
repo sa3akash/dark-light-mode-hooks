@@ -11,3 +11,21 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </ThemeProvider>
   </React.StrictMode>
 );
+
+
+
+// for use hooks
+
+export function ModeToggle() {
+  const { setTheme } = useTheme()
+ 
+  return (
+    <div>
+       <button onClick={() => setTheme("light")}> light </button>
+       <button onClick={() => setTheme("dark")}> dark </button>
+       <button onClick={() => setTheme("system")}> system </button>
+    </div>
+  )
+}
+
+
